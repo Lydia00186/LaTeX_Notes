@@ -1,0 +1,291 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[latin1]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Shi Qiongxue}
+\begin{document}
+$Y=\sum_{n=1}^N\Theta^n\rm X^n + \Theta^0 = \sum_{n=0}^N\Theta^n\rm X^n $\\
+
+$y(k) =\sum\limits_{i=1}^p a_i\left \{  \sum\limits_{l=1}^qd_lg_l\left [ y(k-i) \right ]\right \}+\sum\limits_{j=1}^n b1_j\left \{  \sum\limits_{t=1}^mc1_tf_t\left [ u(k-j) \right ]\right \}+\sum\limits_{j=1}^n b2_j\left \{  \sum\limits_{t=1}^mc2_tf_t\left [ u(k-j) \right ]\right \} + \eta (k) $\\
+
+$\hat{\theta }(N)=(\Phi_{N}^T\Phi_{N})^{-1}\Phi_{N}^TY_N$\\
+
+$Y_N=\Phi _N\theta $\\
+
+$y(k)= \sum_{i=1}^{p}a_i\left \{ \sum_{l=1}^{q}d_lg_l\left [ y(k-i) \right ] \right \}+\sum_{j=1}^{n}b_j\left \{ \sum_{t=1}^{m}c_tf_t\left [ u(k-j) \right ] \right \}+\eta (k)$\\
+
+$\phi(k) =(f_1[u(k-1)],...,f_m[u(k-1)],...,f_1[u(k-n)],...,f_m[u(k-n)],\\ \text{\hspace{2cm}} g_1[y(k-1)],..., g_q[y(k-1)], ...,g_1[y(k-p)],...,g_q[y(k-p)])^T$\\
+
+$\hat{\Theta }_{bc}(N)=\sum_{i=1}^{min(n,m)}\sigma _i\mu _i\nu _i^T$\\
+
+$\hat{\Theta }_{ad}(N)=\sum_{i=1}^{min(p,q)}\delta  _i\xi  _i\zeta  _i^T$\\
+
+$\Phi _N=(\phi ^T(1),..,\phi ^T(N))$\\
+
+$\theta =(b_1c_1,...,b_1c_m,b_2c_1,...,b_2c_m,...,b_nc_1,...b_nc_m,a_1d_1,...,a_1d_q,...,a_pd_1,...,a_pd_q)^T$\\
+
+$\theta_{bc}=bc^T=\begin{pmatrix}
+b_1c_1, & b_1c_2, & ..., & b_1c_m\\ 
+b_2c_1, & b_2c_2, & ..., & b_2c_m\\ 
+ \vdots &  \vdots & \ddots   &\vdots  \\ 
+b_nc_1, & b_nc_2, & ..., & b_nc_m
+\end{pmatrix}$\\
+
+
+
+
+
+$\theta_{ad}=ad^T=\begin{pmatrix}
+a_1d_1, & a_1d_2, & \cdots , & a_1d_m\\ 
+a_2d_1, & a_2d_2, & \cdots, & a_2d_m\\ 
+ \vdots &  \vdots & \ddots   &\vdots  \\ 
+a_nd_1, & a_nd_2, & \cdots, & a_nd_m
+\end{pmatrix}$\\
+
+$\hat{\beta }=(X^TX)^{-1}X^Ty$\\
+
+$Y_N=(y(1),...,y(N))^T, \eta _N=(\eta (1),...,\eta (N))^T,\Phi _N=(\phi ^T(1),..,\phi ^T(N))$\\
+
+$Y_N=\Phi _N\theta+\eta _N$\\
+
+
+
+$\text{with \quad }\Theta [\Theta ^0,...,\Theta ^n] \text{\quad,\quad}X[X^0,...,X^n]$\\
+
+\begin{flushleft}
+\begin{align*}
+x(k)&=f(u(k))\\ 
+&=\sum_{t=1}^{m}c_tf_t(u(k))
+\end{align*}
+\end{flushleft}
+
+$x(k)=f(u(k))=\sum_{t=1}^{m}c_tf_t(u(k))$\\
+
+$x1(k)=f1(u(k))=\sum_{t=1}^{m}c1_tf1_t(u(k)),\quad x2(k)=f2(u(k))=\sum_{t=1}^{m}c2_tf2_t(u(k))$\\
+
+\begin{align*}
+y&=g(r(k))\\
+r(k)&=g^{-1}(y(k))\\
+&=\sum_{l=1}^{q}d_lg_l(y(k))
+\end{align*}
+
+$r(k)=g(y(k))=\sum_{l=1}^{q}d_lg_l(y(k))$\\
+
+$x1(k)=f1(u(k))=\sum_{t=1}^{m}c1_tf1_t(u(k)),\, x2(k)=f2(u(k))=\sum_{t=1}^{m}c2_tf2_t(u(k)),\, r(k)=g(y(k))=\sum_{l=1}^{q}d_lg_l(y(k))$\\
+
+
+$B(q) = b_0+b_1q^{-1}+b_2q^{-2}+...+b_{nb}q^{-nb}$\\
+
+$y(k) =\sum\limits_{j=1}^n b1_j\left \{  \sum\limits_{t=1}^mc1_tf_t\left [ u(k-j) \right ]\right \}+\sum\limits_{j=1}^n b2_j\left \{\sum\limits_{t=1}^mc2_tf_t\left [u(k-j) \right ]\right \}+\sum\limits_{i=1}^p a_i\left \{ \sum\limits_{l=1}^qd_lg_l\left [ y(k-i) \right ]\right \} +\eta(k)$\\
+
+
+
+$\phi(k) =(f_1[u(k-1)],...,f_m[u(k-1)],...,f_1[u(k-n)],...,f_m[u(k-n)],\\ 
+\text{\hspace{2cm}} f2_1[u(k-1)],...,f2_m[u(k-1)],...,f2_1[u(k-n)],...,f2_m[u(k-n)],\\ 
+\text{\hspace{2cm}} g_1[y(k-1)],..., g_q[y(k-1)], ...,g_1[y(k-p)],...,g_q[y(k-p)])^T$\\
+
+$f1_i = radbas(gamma\_f1(u)*u+bias1);\\
+\indent f2_i = radbas(gamma\_f2(u)*u+bias2);\\
+\indent  g_i = radbas(gamma\_g*y+bias3);$\\
+
+\begin{align*}
+f1_i &= radbas(gamma\_f1_i*u+bias1_i);\quad &\text{i=(1,...,4)}\\
+f2_i &= radbas(gamma\_f2_i*u+bias2_i);\quad &\text{i=(1,...,4)}\\
+g_i &= radbas(gamma\_g_i*y+bias3_i);\quad &\text{i=(1,...,4)}\\
+\end{align*}
+
+
+$\Theta_{b1c1},\Theta_{b2c2},\Theta_{ad}$\\
+
+$[U_1,S_1,V_1]=svd(\Theta_{b1c1}),
+[U_2,S_2,V_2]=svd(\Theta_{b2c2}),
+[U_3,S_3,V_3]=svd(\Theta_{ad})$\\
+
+\begin{align*}
+\hat{b1}&=S_{U1}\cdot U_1,\quad \hat{c1}=S_{U1}\cdot S_1(1,1)\cdot V_1^T;\\
+\hat{b2}&=S_{U2}\cdot U_2,\quad \hat{c2}=S_{U2}\cdot S_2(1,1)\cdot V_2^T;\\
+\hat{a}&=S_{U3}\cdot U_3, \quad \hat{d}\,\,=S_{U3}\cdot S_3(1,1)\cdot V_3^T;
+\end{align*} \\
+
+$\hat{y(k)}=\sum\limits_{j=1}^n \hat{b1}_j\left \{  \sum\limits_{t=1}^m\hat{c1}_tf_t\left [ u(k-j) \right ]\right \}+\sum\limits_{j=1}^n \hat{b2}_j\left \{\sum\limits_{t=1}^m\hat{c2}_tf_t\left [u(k-j) \right ]\right \}+\sum\limits_{i=1}^p \hat{a_i}\left \{ \sum\limits_{l=1}^q\hat{d_l}g_l\left [ y(k-i) \right ]\right \} +\eta(k)$\\
+
+$error = \sum\limits_{i=1}^n\left | \hat{y}-Y_N \right |$\\
+
+$m,n,p,q,\gamma_i ,\sigma_i ,ooo,\lambda $\\
+
+$n,p,\gamma_i ,\sigma_i ,ooo,\lambda$\\
+
+$s_{\mu1},s_{\mu2},s_{\xi }$\\
+
+
+$\theta =(b_1c_1,...,b_1c_m,b_2c_1,...,b_2c_m,...,b_nc_1,...b_nc_m, b2_1c2_1,...,b2_1c2_m,\\
+\\indent\indent\, b2_2c2_1,...,b2_2c_m,...,b2_nc2_1,...b2_nc2_m,, a_1d_1,...,a_1d_q,...,a_pd_1,...,a_pd_q)^T$\\
+
+$\phi(k) =(f1_1[u(k-1)],...,f1_m[u(k-1)],...,f1_1[u(k-n)],...,f1_m[u(k-n)],\\ 
+\text{\hspace{1.5cm}} f2_1[u(k-1)],...,f2_m[u(k-1)],...,f2_1[u(k-n)],...,f2_m[u(k-n)],\\ 
+\text{\hspace{1.5cm}} g_1[y(k-1)],..., g_q[y(k-1)], ...,g_1[y(k-p)],...,g_q[y(k-p)])^T$\\
+
+$\theta =(b1_1c1_1,...,b1_1c_m,b1_2c1_1,...,b1_2c1_m,...,b1_nc1_1,...b1_nc1_m, b2_1c2_1,...,b2_1c2_m,\\
+\indent\indent\, b2_2c2_1,...,b2_2c_m,...,b2_nc2_1,...b2_nc2_m,, a_1d_1,...,a_1d_q,...,a_pd_1,...,a_pd_q)^T$\\
+
+$\theta =(b1_1c1_1,...,b1_1c_m,b1_2c1_1,...,b1_2c1_m,...,b1_nc1_1,...b1_nc1_m, \\
+\indent\indent\ b2_1c2_1,...,b2_1c2_m,b2_2c2_1,...,b2_2c_m,...,b2_nc2_1,...b2_nc2_m,\\
+\indent\indent\ a_1d_1,...,a_1d_q,a_2d_1,...,a_2d_q,...,a_pd_1,...,a_pd_q)^T
+$\\
+
+
+$\theta_{b1c1}=b1c1^T=\begin{pmatrix}
+b1_1c1_1, & b1_1c1_2, & ..., & b1_1c1_m\\ 
+b1_2c1_1, & b1_2c1_2, & ..., & b1_2c1_m\\ 
+ \vdots &  \vdots & \ddots   &\vdots  \\ 
+b1_nc1_1, & b1_nc1_2, & ..., & b1_nc1_m
+\end{pmatrix}$\\
+
+$\theta_{b2c2}=b2c2^T=\begin{pmatrix}
+b2_1c2_1, & b2_1c2_2, & ..., & b2_1c2_m\\ 
+b2_2c2_1, & b2_2c2_2, & ..., & b2_2c2_m\\ 
+ \vdots &  \vdots & \ddots   &\vdots  \\ 
+b2_nc2_1, & b2_nc2_2, & ..., & b2_nc2_m
+\end{pmatrix} $\\
+
+
+
+$\Theta_{ad}=ad^T=\begin{pmatrix}
+a_1d_1, & a_1d_2, & \cdots , & a_1d_m\\ 
+a_2d_1, & a_2d_2, & \cdots, & a_2d_m\\ 
+ \vdots &  \vdots & \ddots   &\vdots  \\ 
+a_nd_1, & a_nd_2, & \cdots, & a_nd_m
+\end{pmatrix}$\\
+
+
+\begin{align*}
+f1_i=radbas(\gamma1 _{i},u,\sigma 1_i)\\
+f2_i=radbas(\gamma 2_i,u,\sigma 2_i)\\
+g_i=radbas(\gamma3_i,y,\sigma 3_i)\\
+\end{align*}
+
+\begin{align*}
+f1_i=radbas(\gamma1 _{i},u,\sigma 1_i);\quad  &\text{(i=1,...,4)}\\
+f2_i=radbas(\gamma 2_i,u,\sigma 2_i); \quad   &\text{(i=1,...,4)}\\
+g_i=radbas(\gamma3_i,y,\sigma 3_i); \quad     &\text{(i=1,...,4)}\\
+\end{align*}
+
+$\hat{b1},\hat{c1},\hat{b2},\hat{c2},\hat{a},\hat{d}$\\
+
+$ error = \sum\limits_{i=1}^n\left | \hat{y}-Y_N \right |$\\
+
+$\mathbf{error = \sum\limits_{k=1}^N|\hat{y(k)}-y(k)|}$
+
+\begin{align*}
+\mathbf{f1_i=radbas(\gamma1 _{i},u,\sigma 1_i)}\\
+\mathbf{f2_i=radbas(\gamma2_i,u,\sigma 2_i)}\\
+\mathbf{g_i=radbas(\gamma3_i,y,\sigma 3_i)}\\
+\end{align*}\\
+
+\begin{align*}
+f1_i=radbas(\gamma1 _{i},u,\beta 1_i)\\
+f2_i=radbas(\gamma2_i,u,\beta 2_i)\\
+g_i=radbas(\gamma3_i,y,\beta 3_i)\\
+\end{align*}\\
+
+\begin{align*} 
+\hat{\Theta }_{b1c1}(N)=\sum_{i=1}^{min(n,m)}\sigma1 _i\mu1 _i\nu1 _i^T,\\
+\hat{\Theta }_{b2c2}(N)=\sum_{i=1}^{min(n,m)}\sigma2 _i\mu2 _i\nu2 _i^T,\\
+\hat{\Theta }_{ad}(N)=\sum_{i=1}^{min(p,q)}\delta  _i\xi  _i\zeta  _i^T
+\end{align*}
+
+\begin{align*}
+\hat{b1}(N)&= s_{\mu1} \mu1_1, \quad \hat{c1}(N)= s_{\mu1}\sigma1 _1\nu1_1\\
+\hat{b2}(N)&= s_{\mu2} \mu2_1, \quad \hat{c2}(N)= s_{\mu2}\sigma2 _1\nu2_1\\
+\end{align*}
+
+$\hat{a}(N)= s_{\xi } \xi _1, \quad \hat{d}(N)= s_{\xi}\delta  _1\zeta _1$\\
+
+$y(k)=\Phi^T(k)\theta + \eta(k)$\\
+
+\begin{align*}
+\theta &=(b_1c_1,...,b_1c_m,b_2c_1,...,b_2c_m,...,b_nc_1,...b_nc_m, b2_1c2_1,...,b2_1c2_m,\\
+\indent\indent\,& b2_2c2_1,...,b2_2c_m,...,b2_nc2_1,...b2_nc2_m,a_1d_1,...,a_1d_q,...,a_pd_1,...,a_pd_q)^T\\
+&=(\theta _1,...\theta_{nm},\theta_{nm+1},...,\theta_{2nm},\theta_{2nm+1},...,\theta_{2nm+pq})^T
+ \end{align*}\\
+ 
+$y(k) =\sum\limits_{j=1}^n b1_j\left \{  \sum\limits_{t=1}^mc1_tf1_t\left [ u(k-j) \right ]\right \}+\sum\limits_{j=1}^n b2_j\left \{\sum\limits_{t=1}^mc2_tf2_t\left [u(k-j) \right ]\right \}+\sum\limits_{i=1}^p a_i\left \{ \sum\limits_{l=1}^qd_lg_l\left [ y(k-i) \right ]\right \} +\eta(k)$\\ 
+
+\begin{align*}
+f1_i=exp(-(\gamma1 _{i}\cdot u+\sigma 1_i)^2);\quad  &\text{(i=1,...,4)}\\
+f2_i=exp(-(\gamma 2_i\cdot u+\sigma 2_i)^2); \quad   &\text{(i=1,...,4)}\\
+g_i=exp(-(\gamma3_i\cdot y+\sigma 3_i)^2); \quad     &\text{(i=1,...,4)}\\
+\end{align*}
+
+\begin{align*}
+f1_t(u(k))=exp(-(\gamma1 _{t}\cdot( u(k)+\beta 1_t))^2);\quad  &\text{(t=1,...,4)}\\
+f2_t(u(k))=exp(-(\gamma 2_t\cdot (u(k)+\beta 2_t))^2); \quad   &\text{(t=1,...,4)}\\
+g_l(y(k))=exp(-(\gamma3_l\cdot (y(k)+\beta 3_l))^2); \quad     &\text{(l=1,...,4)}\\
+\end{align*}
+
+$\hat{\Theta}_{b1c1},\,\hat{\Theta}_{b2c2},,\hat{\Theta}_{ad}$\\
+
+$\theta_{ad}=ad^T=\begin{pmatrix}
+a_1d_1, & a_1d_2, & \cdots , & a_1d_q\\ 
+a_2d_1, & a_2d_2, & \cdots, & a_2d_q\\ 
+ \vdots &  \vdots & \ddots   &\vdots  \\ 
+a_pd_1, & a_pd_2, & \cdots, & a_pd_q
+\end{pmatrix}$\\
+
+
+$\hat{\Theta}_{b1c1}=b1c1^T=\begin{pmatrix}
+b1_1c1_1, & b1_1c1_2, & ..., & b1_1c1_m\\ 
+b1_2c1_1, & b1_2c1_2, & ..., & b1_2c1_m\\ 
+ \vdots &  \vdots & \ddots   &\vdots  \\ 
+b1_nc1_1, & b1_nc1_2, & ..., & b1_nc1_m
+\end{pmatrix},\,$
+
+$\hat{\Theta}_{b2c2}=b2c2^T=\begin{pmatrix}
+b2_1c2_1, & b2_1c2_2, & ..., & b2_1c2_m\\ 
+b2_2c2_1, & b2_2c2_2, & ..., & b2_2c2_m\\ 
+ \vdots &  \vdots & \ddots   &\vdots  \\ 
+b2_nc2_1, & b2_nc2_2, & ..., & b2_nc2_m
+\end{pmatrix} $\\
+
+$\Theta_{ad}=ad^T=\begin{pmatrix}
+a_1d_1, & a_1d_2, & \cdots , & a_1d_q\\ 
+a_2d_1, & a_2d_2, & \cdots, & a_2d_q\\ 
+ \vdots &  \vdots & \ddots   &\vdots  \\ 
+a_pd_1, & a_pd_2, & \cdots, & a_pd_q
+\end{pmatrix}$
+
+$\hat{\Theta}_{b1c1}=\hat{b1}\hat{c1}^T=\begin{pmatrix}
+\widehat{b1_1c1_1}, & \widehat{b1_1c1_2}, & ..., & \widehat{b1_1c1_m}\\ 
+\widehat{b1_2c1_1}, & \widehat{b1_2c1_2}, & ..., & \widehat{b1_2c1_m}\\ 
+ \vdots &  \vdots & \ddots   &\vdots  \\ 
+\widehat{b1_nc1_1}, & \widehat{b1_nc1_2}, & ..., & \widehat{b1_nc1_m}
+\end{pmatrix},$\,
+
+$\hat{\Theta}_{b2c2}=\hat{b2}\hat{c2}^T=\begin{pmatrix}
+\widehat{b2_1c2_1}, & \widehat{b2_1c2_2}, & ..., & \widehat{b2_1c2_m}\\ 
+\widehat{b2_2c2_1}, & \widehat{b2_2c2_2}, & ..., & \widehat{b2_2c2_m}\\ 
+ \vdots &  \vdots & \ddots   &\vdots  \\ 
+\widehat{b2_nc2_1}, & \widehat{b2_nc2_2}, & ..., & \widehat{b2_nc2_m}
+\end{pmatrix}$,\\
+
+$\hat\Theta_{ad}=\hat{a}\hat{d}^T=\begin{pmatrix}
+\widehat{a_1d_1}, & \widehat{a_1d_2}, & \cdots , & \widehat{a_1d_q}\\ 
+\widehat{a_2d_1}, & \widehat{a_2d_2}, & \cdots, & \widehat{a_2d_q}\\ 
+ \vdots &  \vdots & \ddots   &\vdots  \\ 
+\widehat{a_pd_1}, & \widehat{a_pd_2}, & \cdots, & \widehat{a_pd_q}
+\end{pmatrix}$
+
+$\hat{y(k)}=\sum\limits_{j=1}^n \hat{b_1}_j\left \{  \sum\limits_{t=1}^m\hat{c_1}_tf_t\left [ u(k-j) \right ]\right \}+\sum\limits_{j=1}^n \hat{b_2}_j\left \{\sum\limits_{t=1}^m\hat{c_2}_tf_t\left [u(k-j) \right ]\right \}+\sum\limits_{i=1}^p \hat{a_i}\left \{ \sum\limits_{l=1}^q\hat{d_l}g_l\left [ y(k-i) \right ]\right \} +\eta(k)$
+
+\begin{align*}
+f_{1t}(u(k))=exp(-(\gamma _{1t}\cdot( u(k)+\beta _{1t}))^2);\quad  &\text{(t=1,...,4)}\\
+f_{2t}(u(k))=exp(-(\gamma _{2t}\cdot (u(k)+\beta_{2t}))^2); \quad   &\text{(t=1,...,4)}\\
+g_{3l}(y(k))=exp(-(\gamma_{3l}\cdot (y(k)+\beta _{3l}))^2); \quad     &\text{(l=1,...,4)}\\
+\end{align*}
+
+\end{document}
